@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Biotech Expansion - Core</name>
+	<author>Lennoxicon</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>biotexpans.core</packageId>
+	<modDependencies>
+		<li>
+			<packageId>ludeon.rimworld.biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+
+	</modDependencies>
+	<loadAfter>
+		<li>ludeon.rimworld.biotech</li>
+	</loadAfter>
+	<description>
+Core mod for the Biotech Expansion series. Mandatory for every mod on there! Be on the look out for other biotech expansions!
+	</description>
+</ModMetaData>
