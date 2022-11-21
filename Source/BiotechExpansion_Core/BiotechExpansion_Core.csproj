@@ -57,7 +57,10 @@
     <Compile Include="CompProperties_MilkableGene.cs" />
     <Compile Include="CompProperties_ShearableGene.cs" />
     <Compile Include="CompShearableGene.cs" />
+    <Compile Include="ConditionalStatAffecter_Unarmed.cs" />
+    <Compile Include="GeneFoodsDisallowed.cs" />
     <Compile Include="GeneMaterialProduced.cs" />
+    <Compile Include="Gene_DietRestricter.cs" />
     <Compile Include="Gene_ExcessMilkProduction.cs" />
     <Compile Include="Gene_RapidCoatGrowth.cs" />
     <Compile Include="GeneImplantInfo.cs" />

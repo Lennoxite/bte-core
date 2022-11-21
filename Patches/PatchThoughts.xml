@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+	  <operations>
+
+		<li Class="PatchOperationAdd"> <!--Carnivore suppresses Ate Corpse-->
+		  <xpath>Defs/ThoughtDef[defName="AteCorpse"]</xpath>
+		  <value>
+			<nullifyingGenes>
+			  <li>BTE_Carnivorous</li>
+			</nullifyingGenes>
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+</Patch>
