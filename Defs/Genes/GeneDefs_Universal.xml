@@ -32,6 +32,7 @@
 			<foodKind>NonMeat</foodKind>
 		</li>
 	</modExtensions>
+    <minAgeActive>3</minAgeActive>
     <biostatCpx>0</biostatCpx>
     <biostatMet>3</biostatMet>
   </GeneDef> 
