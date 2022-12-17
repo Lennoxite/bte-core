@@ -221,7 +221,7 @@
   </PawnKindDef>
 
   
-  <PawnKindDef ParentName="BTE_CarnivoreTribalBase">
+  <PawnKindDef ParentName="BTE_CarnivoreTribalBase" MayRequire="ludeon.rimworld.ideology">
     <defName>BTE_CarniTribal_Miner</defName>
     <label>miner</label>
     <combatPower>35</combatPower>
@@ -253,7 +253,7 @@
     <initialResistanceRange>17~27</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BTE_CarnivoreTribalBase">
+  <PawnKindDef ParentName="BTE_CarnivoreTribalBase" MayRequire="ludeon.rimworld.ideology">
     <defName>BTE_CarniTribal_Logger</defName>
     <label>logger</label>
     <combatPower>40</combatPower>
@@ -288,7 +288,7 @@
     <initialResistanceRange>17~27</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BTE_CarnivoreTribalBase">
+  <PawnKindDef ParentName="BTE_CarnivoreTribalBase" MayRequire="ludeon.rimworld.ideology">
     <defName>BTE_CarniTribal_Farmer</defName>
     <label>farmer</label>
     <combatPower>35</combatPower>
