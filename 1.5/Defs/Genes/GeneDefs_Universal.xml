@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef>
+    <defName>BTE_FeralMight</defName>
+    <label>feral might</label>
+    <description>Carriers of this gene are instinctual experts at wielding their natural and implanted weapons. If their hands are free, they gain a bonus to melee damage. This stacks along with other melee damage genes.</description>
+    <iconPath>Genes/Icons/BTE_FeralMightIcon</iconPath>
+    <displayCategory>BTE_Universal</displayCategory>
+    <displayOrderInCategory>0</displayOrderInCategory>
+	  <conditionalStatAffecters>
+	  <li Class="BTE.ConditionalStatAffecter_Unarmed">
+		<statFactors>
+			<MeleeDamageFactor>1.25</MeleeDamageFactor>
+		</statFactors>
+      </li>
+    </conditionalStatAffecters>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef> 
+  
+  <GeneDef>
+    <defName>BTE_Carnivorous</defName>
+    <label>carnivorous</label>
+    <description>Carriers of this gene are incapable of properly digesting plant based foods. Attempting to do so guarantees food poisoning. Carriers are more accepting of eating raw corpses, however.</description>
+	<geneClass>BTE.Gene_DietRestricter</geneClass>
+    <iconPath>Genes/Icons/BTE_CarnivoreIcon</iconPath>
+    <displayCategory>BTE_Universal</displayCategory>
+    <displayOrderInCategory>1</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE.GeneFoodsDisallowed">
+			<foodKind>NonMeat</foodKind>
+		</li>
+	</modExtensions>
+    <minAgeActive>3</minAgeActive>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>3</biostatMet>
+  </GeneDef> 
+  
+  <GeneDef>
+    <defName>BTE_Herbivorous</defName>
+    <label>herbivorous</label>
+    <description>Carriers of this gene are incapable of properly digesting meat. Attempting to do so guarantees food poisoning.</description>
+	<geneClass>BTE.Gene_DietRestricter</geneClass>
+    <iconPath>Genes/Icons/BTE_HerbivoreIcon</iconPath>
+    <displayCategory>BTE_Universal</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE.GeneFoodsDisallowed">
+			<foodKind>Meat</foodKind>
+		</li>
+	</modExtensions>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>3</biostatMet>
+  </GeneDef> 
+
+
+</Defs>
