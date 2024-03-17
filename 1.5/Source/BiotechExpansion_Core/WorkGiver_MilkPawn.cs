@@ -42,7 +42,7 @@ namespace BTE
 				return false;
 			}
 			CompHasGatherableBodyResource comp = this.GetComp(pawn2);
-			return comp != null && comp.ActiveAndFull && !pawn2.Downed && (pawn2.roping == null || !pawn2.roping.IsRopedByPawn) && pawn2.CanCasuallyInteractNow(false, false, false) && pawn.CanReserve(pawn2, 1, -1, null, forced);
+			return comp != null && comp.ActiveAndFull && !pawn2.Downed && (pawn2.roping == null || !pawn2.roping.IsRopedByPawn) && PawnUtility.CanCasuallyInteractNow(pawn2, false, false, false) && pawn.CanReserve(pawn2, 1, -1, null, forced);
 		}
 		protected override CompHasGatherableBodyResource GetComp(Pawn animal)
 		{
