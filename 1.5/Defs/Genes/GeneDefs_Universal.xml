@@ -54,5 +54,38 @@
     <biostatMet>3</biostatMet>
   </GeneDef> 
 
+  <GeneDef>
+    <defName>BTE_BeardlessFurskin</defName>
+    <label>beardless furskin</label>
+    <labelShortAdj>furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures. This variant has reduced fur along the facial and head area.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>BTE_Universal</displayCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconColor>(0.9, 0.9, 0.9)</iconColor>
+    <exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statOffsets>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <fur>Furskin</fur>
+    <skinIsHairColor>true</skinIsHairColor>
+    <tattoosVisible>false</tattoosVisible>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>PawnRenderNode_Fur</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Hair</colorType>
+        <parentTagDef>Body</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
 
 </Defs>
