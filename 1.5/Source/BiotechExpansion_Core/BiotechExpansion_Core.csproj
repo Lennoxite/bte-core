@@ -67,6 +67,7 @@
     <Compile Include="Gene_AddImplant.cs" />
     <Compile Include="JobDriver_MilkPawn.cs" />
     <Compile Include="JobDriver_ShearPawn.cs" />
+    <Compile Include="PawnRenderNodeWorker_FlipWhenCrawlingOnlyDrafted.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkGiver_MilkPawn.cs" />
