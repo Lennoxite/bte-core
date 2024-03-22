@@ -12,8 +12,8 @@ namespace BTE
             DefOfHelper.EnsureInitializedInCtor(typeof(BTE_JobDefOf));
         }
 
-        public static JobDef BTE_MilkPawn;
-        public static JobDef BTE_ShearPawn;
+        //public static JobDef BTE_MilkPawn;
+        //public static JobDef BTE_ShearPawn;
 
     }
 }

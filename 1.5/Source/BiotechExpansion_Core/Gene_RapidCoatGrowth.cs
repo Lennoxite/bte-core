@@ -11,71 +11,57 @@ namespace BTE
     class Gene_RapidCoatGrowth : Gene
     {
 
-		//public ThingComp LinkedComp
-		//{
-		//	get
-		//	{
-		//		ThingComp milkComp = this.pawn.GetComp<CompMilkable>();
-		//		return milkComp;
-		//	}
-		//}
+        private ThingDef produce;
+        private int amount = 0;
+        private int interval = 0;
+        private int intervalLeft = 0;
 
-		public override void PostAdd()
-		{
-			base.PostAdd();
-			CompShearableGene comp = this.pawn.GetComp<CompShearableGene>();
+        public override void PostAdd()
+        {
+            base.PostAdd();
+            produce = this.def.GetModExtension<GeneMaterialProduced>().produces;
+            amount = this.def.GetModExtension<GeneMaterialProduced>().amount;
+            interval = this.def.GetModExtension<GeneMaterialProduced>().intervalDays * 60000;
+            intervalLeft = this.def.GetModExtension<GeneMaterialProduced>().intervalDays * 60000;
+            //this.pawn.ageTracker.CurLifeStage.milkable = true;
+            //	AddComp(0);
+        }
 
-			if (comp != null)
-			{
-				comp.geneIsPresent = true;
-				comp.produce = this.def.GetModExtension<GeneMaterialProduced>().produces;
-				comp.amount = this.def.GetModExtension<GeneMaterialProduced>().amount;
-				comp.interval = this.def.GetModExtension<GeneMaterialProduced>().intervalDays;
-			}
-			//this.pawn.ageTracker.CurLifeStage.milkable = true;
-			//	AddComp(0);
-		}
 
-		//public void AddComp(float full)
-		//{
-		//CompMilkable newComp = new CompMilkable();
-		//CompProperties_Milkable prop = new CompProperties_Milkable();
-		//newComp.parent = this.pawn;
-		//prop.milkAmount = 14;
-		//prop.milkIntervalDays = 1;
-		//prop.milkFemaleOnly = false;
-		//prop.milkDef = BTE_ThingDefOf.Milk;
-		//newComp.Initialize(prop);
-		//newComp.Fullness = full;
+        public override void Tick()
+        {
+            base.Tick();
+            intervalLeft--;
+            if (intervalLeft <= 0)
+            {
+                intervalLeft = interval;
 
-		//this.pawn.AllComps.Add(newComp);
-		//	this.pawn.ageTracker.CurLifeStage.milkable = true;
-		//}
+                Thing thng = GenSpawn.Spawn(produce, pawn.Position, pawn.Map, WipeMode.VanishOrMoveAside);
+                thng.stackCount = amount;
+            }
+        }
 
-		public override void PostMake()
-		{
-			base.PostMake();
-			//this.pawn.ageTracker.CurLifeStage.milkable = true;
-		}
+        public override void PostMake()
+        {
+            base.PostMake();
+            //this.pawn.ageTracker.CurLifeStage.milkable = true;
+        }
 
-		public override void PostRemove()
-		{
+        public override void PostRemove()
+        {
 
-			//	if (LinkedComp != null)
-			//	{
-			//		LinkedComp.parent = null;
-			//		this.pawn.AllComps.Remove(LinkedComp);
-			//		this.pawn.ageTracker.CurLifeStage.milkable = false;
-			//	}
-			//this.pawn.ageTracker.CurLifeStage.milkable = false;
+            base.PostRemove();
+        }
 
-			CompShearableGene comp = this.pawn.GetComp<CompShearableGene>();
 
-			if (comp != null)
-			{
-				comp.geneIsPresent = false;
-			}
-			base.PostRemove();
-		}
-	}
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look<int>(ref intervalLeft, "coatIntervalLeft", this.def.GetModExtension<GeneMaterialProduced>().intervalDays * 60000, false);
+            Scribe_Defs.Look(ref produce, "coatProduce");
+            Scribe_Values.Look<int>(ref interval, "coatInterval", this.def.GetModExtension<GeneMaterialProduced>().intervalDays * 60000, false);
+            Scribe_Values.Look<int>(ref amount, "coatamount", this.def.GetModExtension<GeneMaterialProduced>().amount, false);
+        }
+
+    }
 }
