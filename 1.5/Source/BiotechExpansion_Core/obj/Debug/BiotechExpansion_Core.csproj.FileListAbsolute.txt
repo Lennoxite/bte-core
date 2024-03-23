@@ -9,3 +9,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-core\Source\Biot
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-core\1.5\Assemblies\BiotechExpansion_Core.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-core\1.5\Source\BiotechExpansion_Core\obj\Debug\BiotechExpansion_Core.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-core\1.5\Source\BiotechExpansion_Core\obj\Debug\BiotechExpansion_Core.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-core\1.5\Source\BiotechExpansion_Core\obj\Debug\BiotechExpansion_Core.csproj.AssemblyReference.cache
