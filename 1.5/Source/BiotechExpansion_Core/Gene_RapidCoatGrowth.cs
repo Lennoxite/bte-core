@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace BTE
@@ -31,13 +32,18 @@ namespace BTE
         public override void Tick()
         {
             base.Tick();
-            intervalLeft--;
-            if (intervalLeft <= 0)
+            if ((pawn.IsColonist || pawn.IsPrisonerOfColony) && pawn.Map != null)
             {
-                intervalLeft = interval;
+                //Log.Message("Ticking for" + pawn.Name.ToStringFull);
+                intervalLeft--;
+                if (intervalLeft <= 0)
+                {
+                    intervalLeft = interval;
 
-                Thing thng = GenSpawn.Spawn(produce, pawn.Position, pawn.Map, WipeMode.VanishOrMoveAside);
-                thng.stackCount = amount;
+                    Thing thng = GenSpawn.Spawn(produce, pawn.Position, pawn.Map, WipeMode.VanishOrMoveAside);
+                    thng.stackCount = amount;
+                }
+
             }
         }
 
@@ -61,6 +67,7 @@ namespace BTE
             Scribe_Defs.Look(ref produce, "coatProduce");
             Scribe_Values.Look<int>(ref interval, "coatInterval", this.def.GetModExtension<GeneMaterialProduced>().intervalDays * 60000, false);
             Scribe_Values.Look<int>(ref amount, "coatamount", this.def.GetModExtension<GeneMaterialProduced>().amount, false);
+            produce = this.def.GetModExtension<GeneMaterialProduced>().produces;
         }
 
     }
