@@ -53,6 +53,8 @@
     <Compile Include="BTEMMLA_HediffDefOf.cs" />
     <Compile Include="BTEMMLA_JobDefOf.cs" />
     <Compile Include="BTEMMLA_ThingDefOf.cs" />
+    <Compile Include="PawnRenderNodeWorker_OnlyDraftedPulsing.cs" />
+    <Compile Include="PawnRenderNode_AttachmentHeadAlternating.cs" />
     <Compile Include="CompMilkableGene.cs" />
     <Compile Include="CompProperties_MilkableGene.cs" />
     <Compile Include="CompProperties_ShearableGene.cs" />
@@ -65,7 +67,7 @@
     <Compile Include="Gene_RapidCoatGrowth.cs" />
     <Compile Include="GeneImplantInfo.cs" />
     <Compile Include="Gene_AddImplant.cs" />
-    <Compile Include="PawnRenderNodeWorker_FlipWhenCrawlingOnlyDrafted.cs" />
+    <Compile Include="PawnRenderNodeWorker_OnlyDrafted.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

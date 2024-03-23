@@ -9,7 +9,7 @@ using Verse;
 
 namespace BTE
 {
-    class PawnRenderNodeWorker_FlipWhenCrawlingOnlyDrafted : PawnRenderNodeWorker_FlipWhenCrawling
+    class PawnRenderNodeWorker_OnlyDrafted : PawnRenderNodeWorker
     {
 
         public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
