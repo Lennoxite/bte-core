@@ -54,6 +54,7 @@
     <Compile Include="BTEMMLA_JobDefOf.cs" />
     <Compile Include="BTEMMLA_ThingDefOf.cs" />
     <Compile Include="PawnRenderNodeWorker_OnlyDraftedPulsing.cs" />
+    <Compile Include="PawnRenderNodeWorker_Pulsing.cs" />
     <Compile Include="PawnRenderNode_AttachmentHeadAlternating.cs" />
     <Compile Include="CompMilkableGene.cs" />
     <Compile Include="CompProperties_MilkableGene.cs" />
