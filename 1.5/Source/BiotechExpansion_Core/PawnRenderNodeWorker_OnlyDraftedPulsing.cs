@@ -14,10 +14,16 @@ namespace BTE
         public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
         {
 			Vector3 floater = base.OffsetFor(node, parms, out pivot);
-			floater.z += 0.05f + 0.05f * (float)Math.Sin(Find.TickManager.TicksGame/30);
+			floater.z += 0.05f + 0.05f * Mathf.Sin((float)Find.TickManager.TicksGame/30f);
             return floater;
 			
         }
+
+		//public static Vector3 FloatingOffset(float tickOffset)
+	//	{
+	//		float num = tickOffset % 500f / 500f;
+	//		num2 = Mathf.Si
+	//	}
         /*protected override Material GetMaterial(PawnRenderNode node, PawnDrawParms parms)
 		{
 			if (alternatingNode == null)
