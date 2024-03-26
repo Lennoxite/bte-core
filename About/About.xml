@@ -21,4 +21,5 @@
 	<description>
 Core mod for the Biotech Expansion series. Mandatory for every mod on there! Be on the look out for other biotech expansions!
 	</description>
+	<modIconPath IgnoreIfNoMatchingField="True">BiotechExpansionCoreIcon</modIconPath>
 </ModMetaData>
