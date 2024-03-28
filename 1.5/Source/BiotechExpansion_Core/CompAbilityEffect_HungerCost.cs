@@ -19,7 +19,7 @@ namespace BTE
             get
             {
                 Need food = this.parent.pawn.needs.TryGetNeed(NeedDefOf.Food);
-                return food != null && food.CurLevel >= this.Props.HungerCost;
+                return food != null && food.CurLevel >= this.Props.hungerCost;
             }
         }
 
@@ -37,7 +37,7 @@ namespace BTE
             Need food = this.parent.pawn.needs.TryGetNeed(NeedDefOf.Food);
             if (food != null)
             {
-                food.CurLevel -= this.Props.HungerCost;
+                food.CurLevel -= this.Props.hungerCost;
             }
         }
 
@@ -49,14 +49,14 @@ namespace BTE
                 reason = null;
                 return false;
             }
-            if (food.CurLevel < this.Props.HungerCost)
+            if (food.CurLevel < this.Props.hungerCost)
             {
                 reason = "Ability Disabled: Not enough food";
                 return true;
             }
             float num = this.TotalHungerCostOfQueuedAbilities();
-            float num2 = this.Props.HungerCost + num;
-            if (this.Props.HungerCost > 1E-45f && num2 > food.CurLevel)
+            float num2 = this.Props.hungerCost + num;
+            if (this.Props.hungerCost > 1E-45f && num2 > food.CurLevel)
             {
                 reason = "Ability Disabled: Not enough food";
                 return true;

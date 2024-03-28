@@ -24,7 +24,7 @@ namespace BTE
                         CompAbilityEffect_HungerCost compAbilityEffect_HungerCost;
                         if ((compAbilityEffect_HungerCost = (enumerator.Current as CompAbilityEffect_HungerCost)) != null)
                         {
-                            return compAbilityEffect_HungerCost.Props.HungerCost;
+                            return compAbilityEffect_HungerCost.Props.hungerCost;
                         }
                     }
                 }

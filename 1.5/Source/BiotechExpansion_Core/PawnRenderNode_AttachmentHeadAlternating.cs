@@ -71,8 +71,6 @@ namespace BTE
         public List<Graphic> graphics = new List<Graphic>();
         public int currentIndex = 0;
 
-        private int ticks = 0;
-        private int tickInterval = 180;
         private int texSize = 0;
     }
 

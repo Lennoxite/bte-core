@@ -14,10 +14,10 @@ namespace BTE
 
         public override IEnumerable<string> ExtraStatSummary()
         {
-            yield return "Hunger cost" + ": " + Mathf.RoundToInt(this.HungerCost * 100f);
+            yield return "Food cost" + ": " + this.hungerCost;
             yield break;
         }
 
-        public float HungerCost;
+        public float hungerCost;
     }
 }
