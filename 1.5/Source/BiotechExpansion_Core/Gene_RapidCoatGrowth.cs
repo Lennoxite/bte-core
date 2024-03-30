@@ -35,16 +35,23 @@ namespace BTE
             if ((pawn.IsColonist || pawn.IsPrisonerOfColony) && pawn.Map != null)
             {
                 //Log.Message("Ticking for" + pawn.Name.ToStringFull);
-                intervalLeft--;
-                if (intervalLeft <= 0)
+                //intervalLeft--;
+                if (pawn.IsHashIntervalTick(interval))
                 {
-                    intervalLeft = interval;
+                    //intervalLeft = interval;
 
-                    Thing thng = GenSpawn.Spawn(produce, pawn.Position, pawn.Map, WipeMode.VanishOrMoveAside);
-                    thng.stackCount = amount;
+                    CreateProduce();
                 }
 
             }
+        }
+
+        public Thing CreateProduce()
+        {
+
+            Thing thng = GenSpawn.Spawn(produce, pawn.Position, pawn.Map, WipeMode.VanishOrMoveAside);
+            thng.stackCount = amount;
+            return thng;
         }
 
         public override void PostMake()
