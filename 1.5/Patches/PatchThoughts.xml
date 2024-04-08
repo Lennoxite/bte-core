@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="PatchOperationSequence">
+	<!--<Operation Class="PatchOperationSequence">
 	  <operations>
 
-		<li Class="PatchOperationAdd"> <!--Carnivore suppresses Ate Corpse-->
+		<li Class="PatchOperationAdd">
 		  <xpath>Defs/ThoughtDef[defName="AteCorpse"]</xpath>
 		  <value>
 			<nullifyingGenes>
@@ -12,5 +12,24 @@
 		  </value>
 		</li>
 	  </operations>
+	</Operation>-->
+	
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ThoughtDef[defName = "AteCorpse"]/nullifyingGenes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThoughtDef[defName = "AteCorpse"]</xpath>
+			<value>
+				<nullifyingGenes>
+					<li>BTE_Carnivorous</li>
+				</nullifyingGenes>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThoughtDef[defName = "AteCorpse"]/nullifyingGenes</xpath>
+				<value>
+					<li>BTE_Carnivorous</li>
+				</value>
+		</match>
 	</Operation>
 </Patch>
