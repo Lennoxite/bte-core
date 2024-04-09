@@ -71,7 +71,6 @@
     <statOffsets>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
     </statOffsets>
-    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
     <fur>Furskin</fur>
     <skinIsHairColor>true</skinIsHairColor>
     <tattoosVisible>false</tattoosVisible>
