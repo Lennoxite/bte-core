@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <GeneCategoryDef>
+    <defName>BTE_Core</defName>
+    <label>Biotech Expansion - Core -DO NOT USE-</label>
+    <displayPriorityInXenotype>-1</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  <GeneCategoryDef>
+    <defName>BTE_Universal</defName>
+    <label>Biotech Expansion - Universal</label>
+    <displayPriorityInXenotype>530</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>
