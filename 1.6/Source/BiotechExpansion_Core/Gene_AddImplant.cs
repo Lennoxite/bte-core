@@ -33,6 +33,13 @@ namespace BTE
 		public override void PostAdd()
 		{
 			base.PostAdd();
+
+			// Statues shouldn't try adding hediffs before setting their kind def.
+			if (this.pawn.kindDef == null)
+			{
+				return;
+			}
+
 			List<BodyPartRecord> hands = this.pawn.def.race.body.GetPartsWithDef(def.GetModExtension<GeneImplantInfo>().bodyPartImplant);
 
 			foreach (BodyPartRecord hd in hands)
