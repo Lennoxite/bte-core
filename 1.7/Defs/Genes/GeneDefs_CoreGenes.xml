@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef>
+    <defName>BTE_ShearableGene</defName>
+    <label>SHEARINGCOREGENE</label>
+    <description>Core gene for Biotech Expansion. Do Not Use!</description>
+    <geneClass>BTE.Gene_RapidCoatGrowth</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_ViolenceDisabled</iconPath>
+    <displayCategory>BTE_Core</displayCategory>
+    <displayOrderInCategory>70</displayOrderInCategory>
+	<canGenerateInGeneSet>false</canGenerateInGeneSet>
+	<modExtensions>
+		<li Class="BTE.GeneMaterialProduced">
+			<produces>WoolSheep</produces>
+			<intervalDays>10</intervalDays>
+			<amount>1</amount>
+		</li>
+	</modExtensions>
+    <statOffsets>
+      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      <ComfyTemperatureMax>5</ComfyTemperatureMax>
+    </statOffsets>
+    <minAgeActive>13</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <biostatArc>1</biostatArc>
+  </GeneDef> 
+  
+
+  <GeneDef>
+    <defName>BTE_MilkableGene</defName>
+    <label>MILKCOREGENE</label>
+    <description>Core gene for Biotech Expansion. Do Not Use!</description>
+    <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_ViolenceDisabled</iconPath>
+    <displayCategory>BTE_Core</displayCategory>
+    <displayOrderInCategory>82</displayOrderInCategory>
+	<canGenerateInGeneSet>false</canGenerateInGeneSet>
+	<modExtensions>
+		<li Class="BTE.GeneMaterialProduced">
+			<produces>Milk</produces>
+			<intervalDays>1</intervalDays>
+			<amount>1</amount>
+		</li>
+	</modExtensions>
+    <minAgeActive>18</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <biostatArc>1</biostatArc>
+  </GeneDef>
+
+
+</Defs>

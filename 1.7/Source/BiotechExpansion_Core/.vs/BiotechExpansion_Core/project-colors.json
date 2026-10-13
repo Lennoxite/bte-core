@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0e9508fc-0a2b-492d-8ae9-d6ec2590366a": {
+      "ProjectGuid": "0e9508fc-0a2b-492d-8ae9-d6ec2590366a",
+      "DisplayName": "BiotechExpansion_Core",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

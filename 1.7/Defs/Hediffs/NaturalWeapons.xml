@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Does not trigger body purist.-->
+  <HediffDef ParentName="ImplantHediffBase" Name="NaturalImplantBase" Abstract="True">
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+  </HediffDef>
+
+
+</Defs>
